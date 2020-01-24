@@ -1,0 +1,16 @@
+{
+  "name": "comfy-house-my-version",
+  "version": "1.0.0",
+  "description": "Comfy House",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "author": "Ashraf",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.0"
+  }
+}

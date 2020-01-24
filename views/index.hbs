@@ -1,0 +1,13 @@
+<h1>Products</h1>
+
+{{#each items}}
+<img src="{{this.image}}" alt="{{this.image}}">
+
+<ul>
+    <li>ID: {{this.id}}</li>
+    <li>Title: {{this.title}}</li>
+    <li>Price: {{this.price}}</li>
+</ul>
+{{/each}}
+
+{{> myPartial}}
