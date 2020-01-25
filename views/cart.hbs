@@ -1,15 +1,3 @@
-<h1>Products</h1>
-<section id="product-section">
-    <div class="title">
-        <h2>Products</h2>
-    </div>
-    <div class="products">
-        {{#each items}}
-        {{> myPartial}}
-        {{/each}}
-    </div>
-</section>
-
 <section class="cart-section">
     <div class="cart">
         <span class="close-cart"><i class="fas fa-window-close"></i></span>
@@ -18,16 +6,16 @@
         <div class="cart-content">
             <!-- cart-item -->
             <div class="cart-item">
-                <a href="#3"><img src=./images/product-3.jpeg alt=single panel bed /></a>
+                <a href="#{{this.id}}"><img src={{this.image}} alt={{this.title}} /></a>
                 <div>
-                    <h4> single panel bed </h4>
-                    <h5> 12.99 </h5>
+                    <h4> {{this.title}} </h4>
+                    <h5> ${{this.price}} </h5>
                     <span class="remove-item">remove</span>
                 </div>
                 <div>
-                    <i class="fas fa-chevron-up" data-id=3></i>
+                    <i class="fas fa-chevron-up" data-id={{this.id}}></i>
                     <p class="item-qty">1</p>
-                    <i class="fas fa-chevron-down" data-id=3></i>
+                    <i class="fas fa-chevron-down" data-id={{this.id}}></i>
                 </div>
             </div>
             <!-- end cart-item -->
@@ -44,5 +32,3 @@
         <!-- end cart-footer -->
     </div>
 </section>
-
-{{> myPartial}}

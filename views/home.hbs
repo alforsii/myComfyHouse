@@ -1,0 +1,26 @@
+<!---Start Image slider -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="7000">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <!-- Carousel  -->
+    <div class="carousel-inner" role="listbox">
+        <!-- slide 1 -->
+        <div class="carousel-item active" style="background: url({{item1.image}}) no-repeat;background-size: cover;">
+            <div class="carousel-caption text-center">
+                <h1>Welcome to Comfy House</h1>
+                <h3>furniture collections</h3>
+                <a href="/collections" class="btn btn-outline-light btn-lg">
+                    Get Started
+                </a>
+            </div>
+        </div>
+        <!-- slide 2 -->
+        <div class="carousel-item" style="background: url({{item2.image}})  no-repeat;background-size: cover;"></div>
+        <!-- slide 3 -->
+        <div class="carousel-item" style="background: url({{item3.image}})  no-repeat;background-size: cover;"></div>
+    </div>
+</div>
+<!-- End Carousel-->

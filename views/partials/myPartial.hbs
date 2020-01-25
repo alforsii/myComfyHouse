@@ -1,1 +1,11 @@
-<h1>Hello from myPartial</h1>
+<div class="item">
+    <div class="item-container">
+        <a href="#"> <img id={{this.id}} class="product-img" src="{{this.image}}" alt="{{this.title}}"></a>
+        <button class="add-btn" data-id={{this.id}}>
+            <i class="fas fa-shopping-cart"></i>
+            add to cart
+        </button>
+    </div>
+    <h3>{{this.title}}</h3>
+    <h4>${{this.price}}</h4>
+</div>
