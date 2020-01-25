@@ -1,13 +1,48 @@
 <h1>Products</h1>
+<section id="product-section">
+    <div class="title">
+        <h2>Products</h2>
+    </div>
+    <div class="products">
+        {{#each items}}
+        {{> myPartial}}
+        {{/each}}
+    </div>
+</section>
 
-{{#each items}}
-<img src="{{this.image}}" alt="{{this.image}}">
-
-<ul>
-    <li>ID: {{this.id}}</li>
-    <li>Title: {{this.title}}</li>
-    <li>Price: {{this.price}}</li>
-</ul>
-{{/each}}
+<section class="cart-section">
+    <div class="cart">
+        <span class="close-cart"><i class="fas fa-window-close"></i></span>
+        <h2>cart</h2>
+        <!-- cart-content -->
+        <div class="cart-content">
+            <!-- cart-item -->
+            <div class="cart-item">
+                <a href="#3"><img src=./images/product-3.jpeg alt=single panel bed /></a>
+                <div>
+                    <h4> single panel bed </h4>
+                    <h5> 12.99 </h5>
+                    <span class="remove-item">remove</span>
+                </div>
+                <div>
+                    <i class="fas fa-chevron-up" data-id=3></i>
+                    <p class="item-qty">1</p>
+                    <i class="fas fa-chevron-down" data-id=3></i>
+                </div>
+            </div>
+            <!-- end cart-item -->
+        </div>
+        <!-- end cart-content -->
+        <!-- cart-footer -->
+        <div class="cart-footer">
+            <h3>
+                total : $
+                <span class="cart-total">900.00</span>
+            </h3>
+            <button class="clear-cart clear-btn">clear cart</button>
+        </div>
+        <!-- end cart-footer -->
+    </div>
+</section>
 
 {{> myPartial}}
