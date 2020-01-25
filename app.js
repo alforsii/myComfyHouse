@@ -32,21 +32,17 @@ const item2 = items[1];
 const item3 = items[2];
 //Home
 app.get('/home', (req, res, next) => {
-  // console.log(' req', req.url);
-  console.log('items', item1);
   res.render('home', { title: 'Home', item1, item2, item3 });
 });
 //Collections
 app.get('/collections', (req, res, next) => {
-  // console.log(' req', items);
-  //   console.log('items', items);
   res.render('collection', { title: 'Collections', items });
 });
 //About
-app.get('/about', (req, res, next) => {
-  // console.log(' req', req.url);
-  //   console.log('items', items);
-  res.render('about', { title: 'About', items });
+app.get('/:id', (req, res, next) => {
+  let item = items.filter(item => req.params.id === item.id);
+  // console.log('Output for: req.params.id', req.params.id);
+  res.render('about', { title: 'About', item });
 });
 
 app.listen(PORT, () => console.log(`Running on ${PORT}`));
