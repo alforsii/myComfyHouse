@@ -4,8 +4,11 @@
         <h2>cart</h2>
         <!-- cart-content -->
         <div class="cart-content">
+            {{#each}}
+            {{> myPartial}}
+            {{/each}}
             <!-- cart-item -->
-            <div class="cart-item">
+            {{!-- <div class="cart-item">
                 <a href="#{{this.id}}"><img src={{this.image}} alt={{this.title}} /></a>
                 <div>
                     <h4> {{this.title}} </h4>
@@ -17,7 +20,7 @@
                     <p class="item-qty">1</p>
                     <i class="fas fa-chevron-down" data-id={{this.id}}></i>
                 </div>
-            </div>
+            </div> --}}
             <!-- end cart-item -->
         </div>
         <!-- end cart-content -->

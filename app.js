@@ -44,5 +44,11 @@ app.get('/:id', (req, res, next) => {
   // console.log('Output for: req.params.id', req.params.id);
   res.render('about', { title: 'About', item });
 });
+//Cart
+app.get('/cart', (req, res, next) => {
+  let item = items.filter(item => req.params.id === item.id);
+  // console.log('Output for: req.params.id', req.params.id);
+  res.render('cart', { title: 'Cart', items });
+});
 
 app.listen(PORT, () => console.log(`Running on ${PORT}`));

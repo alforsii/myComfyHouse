@@ -145,7 +145,7 @@ body {
   font-weight: bold;
   font-size: 0.7rem;
   top: 70%;
-  right: -1;
+  right: -200px;
   background: var(--primaryColor);
   border: none;
   border-radius: 3px;

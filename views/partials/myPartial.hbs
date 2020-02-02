@@ -1,10 +1,8 @@
 <div class="item">
     <div class="item-container">
         <a href="/{{this.id}}"> <img id={{this.id}} class="product-img" src="{{this.image}}" alt="{{this.title}}"></a>
-        <button class="add-btn" data-id={{this.id}}>
-            <i class="fas fa-shopping-cart"></i>
-            add to cart
-        </button>
+        <a href={{this.id}}><button class="add-btn" data-id={{this.id}}>add to cart</button></a>
+        {{!-- <i class="fas fa-shopping-cart"></i> --}}
     </div>
     <h3>{{this.title}}</h3>
     <h4>${{this.price}}</h4>
